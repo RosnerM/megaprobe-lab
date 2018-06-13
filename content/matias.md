@@ -62,6 +62,7 @@ sudo tshark -r /home/matias/tshark/cjdnsdown.pcapng -T fields -e frame.number -e
 
 This code generates a file called megaprobe.csv (Comma Separated Value table), in which the expressions (they are indicated by the -e flag) are frame.number (the packets unique frame identifier), ip.src (source ip), ip.dst (destination ip), eth.src (source Network Card Mac Address), eth.dst (destination Network Card Mac Address), frame.time (time log), fc00.session_state (number which represents one the five Hyperboria packet types [described above], also referred to as a nuance. We ran the previous Tshark code on May 15, 2018 at 1pm AST, while we were resetting the Cjdns virtual network card "Tun0" in order to see a connection being established from scratch to hulk.ccom.uprrp.edu and represented by 'Hello Packets'. 
 This are the results we got, which was sorted by the column 'fc00.session_state':
+
 | frame.number | ip.src         | ip.dst         | eth.src           | eth.dst           |              frame.time             | fc00.session_state |
 |--------------|----------------|----------------|-------------------|-------------------|:-----------------------------------:|-------------------:|
 | 5239         | 136.145.231.10 | 44.131.22.48   | a0:36:9f:23:e9:04 | d0:c7:89:a9:48:80 | May 15, 2018 13:02:48.322843648 AST |                  0 |
